@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyGroceries</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .clickable-box {
+        background-color: #28a74600; /* Hijau */
+        border-radius: 10px;
+        text-align: center;
+        padding: 0; /* Hapus padding agar gambar memenuhi box */
+        margin: 10px auto;
+        max-width: 350px; /* Ukuran maksimal */
+        min-height: 0px; /* Tinggi minimum */
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .clickable-box img {
+        width: 100%; /* Gambar memenuhi lebar box */
+        height: 100%; /* Gambar memenuhi tinggi box */
+        border-radius: 10px; /* Ikuti border box */
+        object-fit: cover; /* Jaga proporsi gambar */
+    }
+
+    .row.justify-content-center {
+        margin-top: -20px; /* Naikkan tombol agar sejajar dengan banner */
+    }
+</style>
+<body>
+    <!-- Header / Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <!-- Ikon dan Tulisan EasyGroceries -->
+            <div class="d-flex align-items-center">
+                <img src="img/z.PNG" alt="Icon" class="me-2" style="width: 40px; height: 30px;">
+                <a class="navbar-brand text-dark fw-bold" href="#">EasyGroceries</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex mx-auto w-50">
+                    <input class="form-control me-2" type="search" placeholder="Cari..." aria-label="Search">
+                </form>
+                <div class="d-flex align-items-center">
+                    <!-- Icon Placeholder -->
+                    <img src="img/User Profile - iconSvg.co.png" alt="Icon" class="me-2" style="width: 30px; height: 30px;">
+                    <!-- Akun -->
+                    <a href="akun.html" class="text-decoration-none fw-bold text-dark">Indy</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Message -->
+    <div class="container text-left my-4">
+        <h1 class="fw-bold">Selamat Datang, Indy!</h1>
+    </div>
+
+    <!-- Banner -->
+    <div class="container">
+        <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="IMG/Frame 87.png" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="IMG/Frame 46.png" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x400/aaaaaa" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5></h5>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="container text-center my-4">
+        <div class="row justify-content-center">
+            <!-- Tombol 1: Keranjang Pesanan -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#keranjang" class="text-decoration-none">
+                    <div class="clickable-box">
+                        <img src="img/Keranjangpesanan-btn (3).png" alt="Keranjang">
+                    </div>
+                </a>
+            </div>
+            <!-- Tombol 2: Pelatihan -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#pelatihan" class="text-decoration-none">
+                    <div class="clickable-box">
+                        <img src="img/Pelatihan-btn.png" alt="Pelatihan">
+                    </div>
+                </a>
+            </div>
+            <!-- Tombol 3: Info Pangan -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#info-pangan" class="text-decoration-none">
+                    <div class="clickable-box">
+                        <img src="img/Infopangan-btn.png" alt="Info Pangan">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
